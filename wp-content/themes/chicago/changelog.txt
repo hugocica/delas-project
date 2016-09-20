@@ -1,0 +1,63 @@
+== Change log ==
+
+= 1.2.4 =
+* Removed: Renaming of title-tagline section
+* Updated: Favicon and Web Clip Migration to Site Icon( Core Support )
+* Updated: Logo to Custom Logo( Core Support ) for WP version 4.5
+
+= 1.2.3 =
+* Added: Disable scrollup option
+* Added: Changelog.txt file to list all change logs
+* Bug Fixed: Featured Slider Transition Effect Not Updating
+* Updated: Jetpack Scroll Pagination Option to enable infinite scroll in Reading Settings
+
+= 1.2.2 =
+* Bug Fixed: Changed Featured content position action hook
+* Bug Fixed: Pagination Type not showing in theme options
+* Bug Fixed: Breadcrumb css issue in IE 11
+
+= 1.2.1 =
+* Bug Fixed: Text domain
+
+= 1.2 =
+* Bug Fixed: Pagination Options not saving Issue
+* Bug Fixed: Changed esc_attr_e to echo esc_attr in searchform.php
+* Compatible with WordPress 4.3
+* Removed support for WordPress version less than 4.1
+* Updated codes to comply with deprecating PHP4 style constructors in WordPress 4.3
+
+= 1.1 =
+* Added: Upgrade to Pro button in customizer
+* Bug Fixed: Social widget padding issue
+* Bug Fixed: Escaped missing options in breadcrumb implementation
+* Bug Fixed: Promotion Headline issue (Reported by Nikita Devereaux )
+* Optimized: Customizer Scripts
+* Updated: Handling of default hex color values of custom background color and custom header text color
+
+= 1.0 =
+* Added Custom Logo Options
+* Added Color Scheme: Light and Dark
+* Added Header Image Options
+* Added Footer Area Sidebars
+* Added Theme Options
+ ** Breadcrumb Options
+ ** Custom Css Options
+ ** Excerpt Options
+ ** Homepage / Frontpage Options
+ ** Icon Options
+ ** Layout Options
+ ** Pagination Options
+ ** Promotion Headline Options
+ ** Search Options
+* Added Featured Content and its Options
+* Added Featured Slider and its Options
+* Bug Fixed: header width issue
+* Bug Fixed: Remove extra container in Social menu
+* Updated: Theme descriptions and tags
+* Updated: Style to match with Pro version
+
+= 0.2 =
+* updated readme.txt file as per the review guideline
+
+= 0.1 =
+* Submitted to WordPress.org
