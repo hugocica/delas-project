@@ -199,6 +199,8 @@ function chicago_scripts() {
 	if ( '1' != $disable_scrollup ) {
 		wp_enqueue_script( 'chicago-scrollup', get_template_directory_uri() . '/js/scrollup.js', array( 'jquery' ), '20141223	', true  );
 	}
+
+	wp_enqueue_style( 'main_style', get_template_directory_uri() . '/css/main.css' );
 }
 add_action( 'wp_enqueue_scripts', 'chicago_scripts' );
 
