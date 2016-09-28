@@ -175,7 +175,7 @@ if ( ! function_exists( 'chicago_site_title_description' ) ) :
 	 *
 	 */
 	function chicago_site_title_description() {
-		?>
+		/* ?>
 		<h1 class="site-title">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<?php bloginfo( 'name' ); ?>
@@ -185,7 +185,7 @@ if ( ! function_exists( 'chicago_site_title_description' ) ) :
 		<h2 class="site-description">
 			<?php bloginfo( 'description' ); ?>
 		</h2>
-		<?php
+		<?php */
 	}
 endif;
 add_action( 'chicago_header', 'chicago_site_title_description', 60 );
