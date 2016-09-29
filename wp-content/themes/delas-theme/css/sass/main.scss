@@ -1,0 +1,63 @@
+$pink_delas: #f37884;
+$green_delas: #aad7ab;
+
+#scrollup {
+    background-color: $pink_delas;
+    border-radius: 0;
+    box-shadow: none;
+    transition: all ease 0.5s;
+
+    &:hover {
+        background-color: $green_delas;
+    }
+}
+
+.main-header {
+    .main-navigation-bar {
+        background-color: $pink_delas;
+
+        ul {
+            list-style: none;
+            margin-bottom: 0;
+            padding: 0;
+
+            .menu-item {
+                display: inline-block;
+                text-transform: uppercase;
+                padding: 10px 0;
+
+                &:first-of-type {
+                    a {
+                        border-left: none;
+                    }
+                }
+                a {
+                    color: #fff;
+                    font-size: 16px;
+                    text-decoration: none;
+                    border-left: 1px solid #fff;
+                    padding: 0 15px;
+                }
+                .sub-menu {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+#wrapper {
+    #episodes-list {
+        .episodes-itens {
+            .episodes-item {
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    #footer {
+        background-color: $green_delas;
+    }
+}

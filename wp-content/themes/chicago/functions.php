@@ -200,6 +200,7 @@ function chicago_scripts() {
 		wp_enqueue_script( 'chicago-scrollup', get_template_directory_uri() . '/js/scrollup.js', array( 'jquery' ), '20141223	', true  );
 	}
 
+	wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'main_style', get_template_directory_uri() . '/css/main.css' );
 }
 add_action( 'wp_enqueue_scripts', 'chicago_scripts' );
@@ -354,3 +355,5 @@ function chicago_site_icon_migrate() {
 	}
 }
 add_action( 'after_setup_theme', 'chicago_site_icon_migrate' );
+
+show_admin_bar(false);

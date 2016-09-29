@@ -68,17 +68,17 @@ if ( ! function_exists( 'chicago_promotion_headline' ) ) :
 	 *
 	 * @since Chicago 0.1
 	 */
-	function chicago_promotion_headline() { 
+	function chicago_promotion_headline() {
 		global $post, $wp_query;
 	   	$enable_promotion = get_theme_mod( 'promotion_headline_option', chicago_get_default_theme_options( 'promotion_headline_option' ) );
 
 		// Front page displays in Reading Settings
-		$page_for_posts = get_option('page_for_posts'); 
+		$page_for_posts = get_option('page_for_posts');
 
 		// Get Page ID outside Loop
 		$page_id = $wp_query->get_queried_object_id();
 
-		 if ( 'entire-site' == $enable_promotion || ( ( is_front_page() || ( is_home() && $page_for_posts != $page_id ) ) && 'homepage' ==  $enable_promotion  ) ) {		 	
+		 if ( 'entire-site' == $enable_promotion || ( ( is_front_page() || ( is_home() && $page_for_posts != $page_id ) ) && 'homepage' ==  $enable_promotion  ) ) {
 			get_sidebar( 'promotion-headline' );
 		}
 	} // chicago_promotion_featured_content
@@ -144,7 +144,7 @@ if ( ! function_exists( 'chicago_jetpack_logo' ) ) :
 	 */
 	function chicago_jetpack_logo() {
 		if ( function_exists( 'jetpack_the_site_logo' ) ) {
-			jetpack_the_site_logo();	
+			jetpack_the_site_logo();
 		}
 	}
 endif;
@@ -181,7 +181,7 @@ if ( ! function_exists( 'chicago_site_title_description' ) ) :
 				<?php bloginfo( 'name' ); ?>
 			</a>
 		</h1>
-		
+
 		<h2 class="site-description">
 			<?php bloginfo( 'description' ); ?>
 		</h2>
@@ -213,10 +213,10 @@ if ( ! function_exists( 'chicago_header_right' ) ) :
 	 *
 	 * @since Chicago 0.1
 	 */
-	function chicago_header_right() { 
-		//A sidebar in the Header Right 
+	function chicago_header_right() {
+		//A sidebar in the Header Right
 		if ( is_active_sidebar( 'header-right' ) ) {
-			get_sidebar( 'header-right' ); 
+			get_sidebar( 'header-right' );
 		}
 	}
 endif;
@@ -258,7 +258,7 @@ if ( ! function_exists( 'chicago_social_menu' ) ) :
 				    'link_after'		=> '</span>' )
 				    );
                 ?>
-            </div><!-- .social-menu --> 
+            </div><!-- .social-menu -->
         <?php
     	}
 	}
@@ -279,9 +279,9 @@ if ( ! function_exists( 'chicago_primary_menu' ) ) :
     		<div class="wrapper">
 	    		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Menu', 'chicago' ); ?></button>
 	           	<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'chicago' ); ?></a>
-	           	
+
 	           	<?php
-                if ( has_nav_menu( 'primary' ) ) { 
+                if ( has_nav_menu( 'primary' ) ) {
                     $chicago_primary_menu_args = array(
                         'theme_location'    => 'primary',
                         'menu_class'        => 'menu chicago-nav-menu',
@@ -292,7 +292,7 @@ if ( ! function_exists( 'chicago_primary_menu' ) ) :
                 }
                 else {
                     wp_page_menu( array( 'menu_class'  => 'menu page-menu-wrap' ) );
-                }   
+                }
                 ?>
           	</div><!-- .wrapper -->
         </nav><!-- #site-navigation -->
@@ -327,7 +327,7 @@ if ( ! function_exists( 'chicago_content_start' ) ) :
 	 */
 	function chicago_content_start() {
 		?>
-		<div id="content" class="site-content">
+		<div id="content" class="site-content container">
 	<?php
 	}
 endif;
@@ -385,21 +385,21 @@ if ( ! function_exists( 'chicago_footer_info' ) ) :
 	 */
 	function chicago_footer_info() { ?>
 		<div class="site-info">
-			<?php 
+			<?php
 				if ( ( !$chicago_footer_info = get_transient( 'chicago_footer_info' ) ) ) {
 					$chicago_footer_info = wp_kses_post( chicago_copyright() );
-					
+
 					$chicago_footer_info .= chicago_seperator();
-					
+
 					$chicago_footer_info .= wp_kses_post( chicago_profile() );
-					
+
 					set_transient( 'chicago_footer_info', $chicago_footer_info, 86940 );
-				}				
+				}
 				echo $chicago_footer_info;
 			?>
 		</div><!-- .site-info -->
-		
-	<?php 
+
+	<?php
 	}
 endif;
 add_action( 'chicago_footer', 'chicago_footer_info', 30 );
