@@ -6,6 +6,7 @@
 		<meta name="theme-color" content="#f37884">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+		<link href="//db.onlinewebfonts.com/c/e0870aa7286662dd08f498a39e6737de?family=PacificNorthwestLettersW01" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
 		<?php wp_head(); ?>
@@ -984,6 +985,10 @@
 				</div>
 
 				<div class="social-header col-md-4">
+					<div class="support-div"></div>
+					<a href="">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/social-icons-1/instagram.svg">
+					</a>
 				</div>
 			</div>
 

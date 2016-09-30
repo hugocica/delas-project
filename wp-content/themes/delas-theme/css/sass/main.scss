@@ -1,6 +1,13 @@
 $pink_delas: #f37884;
 $green_delas: #aad7ab;
 
+@font-face {
+    font-family: 'Pacific Northwest';
+    src: url('fonts/Pacific Northwest.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 #scrollup {
     background-color: $pink_delas;
     border-radius: 0;
@@ -12,7 +19,37 @@ $green_delas: #aad7ab;
     }
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pacific Northwest';
+}
+p, span {
+    font-family: 'Lato';
+    font-size: 14px;
+}
+h2 {
+    &.section-title {
+
+    }
+}
+
+.support-div {
+    display: inline-block;
+    width: 0.1px;
+    height: 100%;
+    vertical-align: middle;
+}
 .main-header {
+    .social-header {
+        height: 185px;
+
+        a {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        img {
+            width: 52px;
+        }
+    }
     .main-navigation-bar {
         background-color: $pink_delas;
 
