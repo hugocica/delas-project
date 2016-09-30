@@ -1,5 +1,7 @@
 $pink_delas: #f37884;
 $green_delas: #aad7ab;
+$main-font: 'Pacific Northwest';
+$secondary-font: 'Lato';
 
 @font-face {
     font-family: 'Pacific Northwest';
@@ -20,7 +22,7 @@ $green_delas: #aad7ab;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Pacific Northwest';
+    font-family: $main-font;
 }
 p, span {
     font-family: 'Lato';
@@ -52,6 +54,7 @@ h2 {
     }
     .main-navigation-bar {
         background-color: $pink_delas;
+        margin: 10px 0;
 
         ul {
             list-style: none;
@@ -62,6 +65,7 @@ h2 {
                 display: inline-block;
                 text-transform: uppercase;
                 padding: 10px 0;
+                font-family: $main-font;
 
                 &:first-of-type {
                     a {
@@ -70,10 +74,10 @@ h2 {
                 }
                 a {
                     color: #fff;
-                    font-size: 16px;
+                    font-size: 26px;
                     text-decoration: none;
                     border-left: 1px solid #fff;
-                    padding: 0 15px;
+                    padding: 0 20px;
                 }
                 .sub-menu {
                     display: none;

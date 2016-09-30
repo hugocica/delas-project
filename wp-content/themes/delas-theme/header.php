@@ -986,7 +986,7 @@
 
 				<div class="social-header col-md-4">
 					<div class="support-div"></div>
-					<a href="">
+					<a target="_blank" href="https://www.instagram.com/bealpriscila/">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/social-icons-1/instagram.svg">
 					</a>
 				</div>

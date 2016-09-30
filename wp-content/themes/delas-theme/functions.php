@@ -44,4 +44,7 @@ function get_insta_posts( $user_id ) {
     // echo '</pre>';
 }
 
+include_once get_template_directory().'/metaboxes/setup.php';
+include_once get_template_directory().'/metaboxes/delas-spec.php';
+
 ?>
