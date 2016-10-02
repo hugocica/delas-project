@@ -6,6 +6,7 @@
 		<meta name="theme-color" content="#f37884">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 		<link href="//db.onlinewebfonts.com/c/e0870aa7286662dd08f498a39e6737de?family=PacificNorthwestLettersW01" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
@@ -988,6 +989,9 @@
 					<div class="support-div"></div>
 					<a target="_blank" href="https://www.instagram.com/bealpriscila/">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/social-icons-1/instagram.svg">
+					</a>
+					<a target="_blank" href="https://facebook.com/">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/social-icons-1/facebook.svg">
 					</a>
 				</div>
 			</div>

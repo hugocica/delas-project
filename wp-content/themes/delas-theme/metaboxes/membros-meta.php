@@ -10,15 +10,12 @@
 	<?php while($mb->have_fields_and_multi('locodivos')): ?>
 	<?php $mb->the_group_open(); ?>
 
-		<?php $mb->the_field('nome'); ?>
-		<label for="<?php $mb->the_name(); ?>">Nome</label>
-		<p><input type="text" id="<?php $mb->the_name(); ?>" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/></p>
+		<div class="col-md-6">
+			<?php $mb->the_field('nome'); ?>
+			<label for="<?php $mb->the_name(); ?>">Nome</label>
+			<p class="col-md-12"><input type="text" id="<?php $mb->the_name(); ?>" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/></p>
+		</div>
 
-		<?php $mb->the_field('cargo'); ?>
-		<label for="<?php $mb->the_name(); ?>">Cargo</label>
-		<p><input type="text" id="<?php $mb->the_name(); ?>" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/></p>
-
-		<span style="font-size: 14px; font-style: italic;"><strong>Recomendação:</strong> Para melhor efeito, as duas fotos precisam ter o mesmo tamanho.</span>
 		<div class="col-md-6">
 			<?php $mb->the_field('photo'); ?>
 			<label for="<?php $mb->the_name(); ?>">Foto 1</label>
@@ -29,13 +26,25 @@
 			</p>
 		</div>
 
-		<div class="col-md-6">
-			<?php $mb->the_field('photo_hover'); ?>
-			<label for="<?php $mb->the_name(); ?>">Foto 2</label>
-			<?php $wpalchemy_media_access->setGroupName('img-hover-n'. $mb->get_the_index())->setInsertButtonLabel('Inserir'); ?>
+		<div class="col-md-12">
+			<?php $mb->the_field('descricao'); ?>
+			<label for="<?php $mb->the_name(); ?>">Descrição</label>
 			<p>
-			<?php echo $wpalchemy_media_access->getField(array('name' => $mb->get_the_name(), 'value' => $mb->get_the_value())); ?>
-			<?php echo $wpalchemy_media_access->getButton(); ?>
+				<?php
+					$val = html_entity_decode($mb->get_the_value());
+					$id = $mb->get_the_name();
+			        $settings = array(
+					'textarea_rows' => 6,
+					'quicktags' => array(
+			                        'buttons' => 'em,strong,link',
+			                ),
+			                'quicktags' => true,
+			                'tinymce' => true
+			        );
+
+			        wp_editor($val, $id, $settings);
+				?>
+	    		<span>Enter in a list of the publications</span>
 			</p>
 		</div>
 
@@ -56,5 +65,10 @@
 	.col-md-6 {
 		float: left;
 		width: 50%;
+	}
+	.col-md-12 {
+		float: left;
+		clear: both;
+		width: 100%;
 	}
 </style>

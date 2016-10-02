@@ -22,11 +22,12 @@
             foreach ( $personagens['locodivos'] as $personagem ) {
                 ?>
                 <div class="personagem-item">
-                    <div>
+                    <div class="entry-thumb">
                         <img src="<?php echo $personagem['photo']; ?>">
                     </div>
-                    <div>
+                    <div class="entry-content">
                         <h3 class="section-title"><?php echo $personagem['nome']; ?></h3>
+                        <p><?php echo $personagem['descricao']; ?></p>
                     </div>
                 </div>
                 <?php
