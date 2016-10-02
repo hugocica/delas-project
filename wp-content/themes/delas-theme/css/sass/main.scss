@@ -23,10 +23,12 @@ $secondary-font: 'Lato';
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $main-font;
+    color: #414141;
 }
 p, span {
     font-family: 'Lato';
     font-size: 14px;
+    color: #414141
 }
 h2 {
     &.section-title {
@@ -43,6 +45,7 @@ h2 {
 .main-header {
     .social-header {
         height: 185px;
+        text-align: right;
 
         a {
             display: inline-block;
@@ -99,6 +102,65 @@ h2 {
     }
 
     #footer {
-        background-color: $green_delas;
+    	background-color: $green_delas;
+    	color: #414141;
+    	padding: 5px 0;
+
+    	p {
+    		display: inline-block;
+    		vertical-align: middle;
+    		margin: 0;
+    	    font-size: 12px;
+    	}
+    	.cr-box {
+    		text-align: left;
+    		height: 45px;
+    	}
+    }
+    .about-text {
+    	text-align: left;
+
+    	p {
+    		margin-bottom: 0;
+    	}
+    }
+    .dev-container {
+    	height: 45px;
+    	vertical-align: middle;
+        text-align: right;
+
+    	p {
+    		display: inline-block;
+    	}
+    }
+    .dev-box {
+    	display: inline-block;
+    	vertical-align: middle;
+    	border: 2px solid #414141;
+    	padding: 3px 8px;
+    	margin-left: 4px;
+
+    	.fa-github {
+    		-webkit-transition: -webkit-transform 0.8s ease-in-out;
+    		-ms-transition: -ms-transform 0.8s ease-in-out;
+    		transition: transform 0.8s ease-in-out;
+    		font-size: 24px;
+    	}
+    	span {
+    		display: inline-block;
+    	}
+        a {
+            color: #414141;
+        }
+    	&:hover {
+    		a {
+    			color: #414141;
+    		}
+    		.fa-github {
+    			transform: rotate(360deg);
+    			-ms-transform:rotate(360deg);
+    			-webkit-transform:rotate(360deg);
+    		}
+    	}
     }
 }

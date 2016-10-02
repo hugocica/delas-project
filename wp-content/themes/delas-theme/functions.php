@@ -6,6 +6,7 @@ show_admin_bar( false );
 // adicona as tags de css e os scripts js
 function add_theme_scripts() {
   wp_enqueue_style( 'style', get_stylesheet_uri() );
+  wp_enqueue_style( 'fontawrsome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '1.1', 'all');
   wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '1.1', 'all');
   wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css', array(), '1.1', 'all');
   // wp_enqueue_style( '1200', get_template_directory_uri() . '/css/1200.css', array(), '1.1', 'all');
