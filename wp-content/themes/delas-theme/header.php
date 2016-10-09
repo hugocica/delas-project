@@ -8,7 +8,7 @@
 
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 		<link href="//db.onlinewebfonts.com/c/e0870aa7286662dd08f498a39e6737de?family=PacificNorthwestLettersW01" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
 		<?php wp_head(); ?>
 	</head>

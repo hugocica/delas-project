@@ -6,7 +6,7 @@
 		$personagens = new WPAlchemy_MetaBox(
 						array (
 							'id' => '_personagens_metabox',
-							'title' => 'Lista das Personagens',
+							'title' => 'Lista das Pessoas',
 							'types' => array('page'), // added only for pages and to custom post type "events"
 							'context' => 'normal', // same as above, defaults to "normal"
 							'priority' => 'high', // same as above, defaults to "high"

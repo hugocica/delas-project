@@ -24,10 +24,11 @@ add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 register_nav_menu( 'primary-menu', 'Primary Menu' );
 
 function get_insta_posts( $user_id ) {
-    $insta_token = '808c80f73b5b474486b039875a6f2ec2';
-	// $insta_user = '1173194129'; //bealpriscila
-	// $insta_user = '31520384'; //hugo_cica
-	$insta_url = 'https://api.instagram.com/v1/users/self/media/liked??access_token='. $insta_token;
+    // $insta_token = '808c80f73b5b474486b039875a6f2ec2';
+	// // $insta_user = '1173194129'; //bealpriscila
+	// // $insta_user = '31520384'; //hugo_cica
+	// $insta_url = 'https://api.instagram.com/v1/users/self/media/recent?access_token='. $insta_token;
+    // // $insta_url = 'https://api.instagram.com/v1/users/<user-id>/media/recent/';
 	//
 	// $process = curl_init();
     // curl_setopt($process, CURLOPT_URL, $insta_url);
@@ -39,7 +40,7 @@ function get_insta_posts( $user_id ) {
     // curl_setopt($process, CURLOPT_RETURNTRANSFER, 1);
     // $return = curl_exec($process);
     // curl_close($process);
-	//
+    //
     // echo '<pre>';
     // var_dump($return);
     // echo '</pre>';

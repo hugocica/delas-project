@@ -1,7 +1,7 @@
 $pink_delas: #f37884;
 $green_delas: #aad7ab;
 $main-font: 'Pacific Northwest';
-$secondary-font: 'Lato';
+$secondary-font: 'Montserrat';
 
 @font-face {
     font-family: 'Pacific Northwest';
@@ -26,13 +26,14 @@ h1, h2, h3, h4, h5, h6 {
     color: #414141;
 }
 p, span {
-    font-family: 'Lato';
-    font-size: 14px;
+    font-family: 'Montserrat';
+    font-size: 16px;
     color: #414141
 }
 h2 {
     &.section-title {
-
+        padding: 0 15px;
+        font-size: 36px;
     }
 }
 
@@ -57,7 +58,7 @@ h2 {
     }
     .main-navigation-bar {
         background-color: $pink_delas;
-        margin: 10px 0;
+        margin: 10px 0 0;
 
         ul {
             list-style: none;
@@ -70,6 +71,10 @@ h2 {
                 padding: 10px 0;
                 font-family: $main-font;
 
+                &.current-menu-item, &:hover {
+                    border-bottom: 3px solid #94464d;
+                    padding-bottom: 7px !important;
+                }
                 &:first-of-type {
                     a {
                         border-left: none;
@@ -101,6 +106,35 @@ h2 {
         }
     }
 
+    .personagens-list {
+        .personagem-item {
+            margin: 20px 0;
+            height: 350px;
+
+            .entry-thumb {
+                height: 100%;
+                background-size: cover;
+                background-position: 50%;
+            }
+            .entry-content {
+                height: 100%;
+                background-color: #e5ffe5;
+                padding: 20px 15px;
+
+                img {
+                    height: 100px;
+                }
+                h3 {
+                    padding: 0 20px;
+                    font-size: 36px;
+                }
+                p {
+                    padding: 15px 20px;
+                }
+            }
+        }
+    }
+
     #footer {
     	background-color: $green_delas;
     	color: #414141;
@@ -110,7 +144,7 @@ h2 {
     		display: inline-block;
     		vertical-align: middle;
     		margin: 0;
-    	    font-size: 12px;
+    	    font-size: 10px;
     	}
     	.cr-box {
     		text-align: left;
@@ -145,9 +179,11 @@ h2 {
     		-ms-transition: -ms-transform 0.8s ease-in-out;
     		transition: transform 0.8s ease-in-out;
     		font-size: 24px;
+            vertical-align: sub;
     	}
     	span {
     		display: inline-block;
+            font-size: 12px;
     	}
         a {
             color: #414141;

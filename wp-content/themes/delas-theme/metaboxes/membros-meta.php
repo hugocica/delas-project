@@ -4,8 +4,12 @@
 	<?php $mb->the_field('show'); ?>
 	<input type="checkbox" id="<?php $mb->the_name(); ?>" name="<?php $mb->the_name(); ?>"  style="display: inline-block;vertical-align: middle;" value="Sim" <?php echo ($mb->get_the_value() == 'Sim')?'checked="checked"':''; ?>>
 
+	<h4 for="<?php $mb->the_name(); ?>" style="display: block;vertical-align: middle;color: #000;margin-top: 12px;">Título da seção?</h4>
+	<?php $mb->the_field('title'); ?>
+	<input type="text" id="<?php $mb->the_name(); ?>" name="<?php $mb->the_name(); ?>"  style="display: inline-block;vertical-align: middle;" value="<?php $mb->the_value(); ?>">
+
 	<hr>
-	<h4 style="color: #000;">LocomoDivos</h4>
+	<h4 style="color: #000;">Pessoas</h4>
 
 	<?php while($mb->have_fields_and_multi('locodivos')): ?>
 	<?php $mb->the_group_open(); ?>
@@ -13,12 +17,16 @@
 		<div class="col-md-6">
 			<?php $mb->the_field('nome'); ?>
 			<label for="<?php $mb->the_name(); ?>">Nome</label>
-			<p class="col-md-12"><input type="text" id="<?php $mb->the_name(); ?>" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/></p>
+			<?php $wpalchemy_media_access->setGroupName('img-m'. $mb->get_the_index())->setInsertButtonLabel('Inserir'); ?>
+			<p>
+			<?php echo $wpalchemy_media_access->getField(array('name' => $mb->get_the_name(), 'value' => $mb->get_the_value())); ?>
+			<?php echo $wpalchemy_media_access->getButton(); ?>
+			</p>
 		</div>
 
 		<div class="col-md-6">
 			<?php $mb->the_field('photo'); ?>
-			<label for="<?php $mb->the_name(); ?>">Foto 1</label>
+			<label for="<?php $mb->the_name(); ?>">Foto</label>
 			<?php $wpalchemy_media_access->setGroupName('img-n'. $mb->get_the_index())->setInsertButtonLabel('Inserir'); ?>
 			<p>
 			<?php echo $wpalchemy_media_access->getField(array('name' => $mb->get_the_name(), 'value' => $mb->get_the_value())); ?>
