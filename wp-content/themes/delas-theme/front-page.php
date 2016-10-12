@@ -6,18 +6,38 @@
 
 <div class="container">
 	<section id="episodes-list">
-		<div class="episodes-itens col-md-12">
-			<h2 class="section-title">Últimos episódios</h2>
+		<h2 class="section-title">Últimos episódios</h2>
+		<div class="episodes-container col-md-12">
 
-			<div class="episodes-item col-md-4">
-				<img src="https://instagram.fbfh1-2.fna.fbcdn.net/t51.2885-15/e35/14482891_1065508803504378_7638465758158127104_n.jpg?ig_cache_key=MTM1MjAwMzUzNTQyNDA2OTM5MQ%3D%3D.2">
-			</div>
-			<div class="episodes-item col-md-4">
-				<img src="https://instagram.fbfh1-2.fna.fbcdn.net/t51.2885-15/e35/14591882_1237680142920029_4807677359102623744_n.jpg?ig_cache_key=MTM1MzAxMDc2NDE2ODI4OTgzNg%3D%3D.2">
-			</div>
-			<div class="episodes-item col-md-4">
-				<img src="https://instagram.fbfh1-2.fna.fbcdn.net/t51.2885-15/e35/14566568_304983053203438_6028561365344452608_n.jpg?ig_cache_key=MTM1NTMwMzY4MTg2Nzk1NTI3MA%3D%3D.2">
-			</div>
+			<?php
+				$episodios = get_insta_posts();
+
+		        for ( $aux = 0; $aux < 3; $aux++ ) {
+		        	$data = $episodios->data[$aux];
+		            // echo '<pre>';
+		            // var_dump($data);
+		            // echo '</pre>';
+		            // die();
+		            ?>
+		                <div class="episodes-item col-md-4">
+		                    <div class="author-info">
+		                        <div class="support-div"></div>
+		                        <img src="<?php echo $data->user->profile_picture; ?>">
+		                        <p><?php echo $data->user->username; ?></p>
+		                    </div>
+		                    <figure>
+		                        <div class="support-div"></div>
+		                        <img width="98%" src="<?php echo $data->images->standard_resolution->url; ?>">
+		                    </figure>
+		                    <div class="like-info">
+		                        <div class="support-div"></div>
+		                        <img src="<?php echo get_template_directory_uri(); ?>/images/like_filled.svg">
+		                        <p class="count"><?php echo $data->likes->count; ?></p>
+		                    </div>
+		                </div>
+		            <?php
+		        }
+		    ?>
 		</div>
 	</section>
 </div>
