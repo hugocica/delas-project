@@ -42,4 +42,16 @@
 	</section>
 </div>
 
+<section id="hightlight">
+	<blockquote>
+		<p>Chapado mas sempre ligado</p>
+	</blockquote>
+</section>
+
+<div class="container">
+	<section class="social">
+		<div class="fb-page" data-href="https://www.facebook.com/seriedelas/" data-tabs="timeline" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/seriedelas/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/seriedelas/">Série Delas</a></blockquote></div>	
+	</section>
+</div>
+
 <?php echo get_footer(); ?>
