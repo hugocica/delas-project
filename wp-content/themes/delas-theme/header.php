@@ -6,6 +6,16 @@
 		<meta name="theme-color" content="#f37884">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+		<!-- facebook og tags -->
+		<meta property="og:locale" content="pt_BR">
+		<meta property="og:url" content="<?php echo site_url(); ?>">
+		<meta property="og:title" content="<?php echo ( is_front_page() ) ? 'Delas' : 'Delas | ' . get_the_title(); ?>">
+		<meta property="og:site_name" content="Série Delas">
+		<meta property="og:description" content="Delas é uma série realizada por alunas de Rádio e TV da Unesp Bauru e produzida para a plataforma Instagram! A série conta a história de quatro meninas que juntas vão tentar superar traumas pelos quais passaram ainda na adolescência, e através de suas histórias poder ajudar outras garotas, que assim como elas podem estar passando por situações semelhantes!">
+		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/delas-logo.png">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:type" content="website">
+
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 		<link href="//db.onlinewebfonts.com/c/e0870aa7286662dd08f498a39e6737de?family=PacificNorthwestLettersW01" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
