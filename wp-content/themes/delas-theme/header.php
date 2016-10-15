@@ -8,11 +8,11 @@
 
 		<!-- facebook og tags -->
 		<meta property="og:locale" content="pt_BR">
-		<meta property="og:url" content="<?php echo site_url(); ?>">
+		<meta property="og:url" content="<?php echo site_url(); ?>/">
 		<meta property="og:title" content="<?php echo ( is_front_page() ) ? 'Delas' : 'Delas | ' . get_the_title(); ?>">
 		<meta property="og:site_name" content="Série Delas">
 		<meta property="og:description" content="Delas é uma série realizada por alunas de Rádio e TV da Unesp Bauru e produzida para a plataforma Instagram! A série conta a história de quatro meninas que juntas vão tentar superar traumas pelos quais passaram ainda na adolescência, e através de suas histórias poder ajudar outras garotas, que assim como elas podem estar passando por situações semelhantes!">
-		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/delas-logo.png">
+		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/delas-og.png">
 		<meta property="og:image:type" content="image/jpeg">
 		<meta property="og:type" content="website">
 
@@ -590,7 +590,7 @@
 					<a target="_blank" href="https://www.instagram.com/bealpriscila/">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/social-icons-1/instagram.svg">
 					</a>
-					<a target="_blank" href="https://facebook.com/">
+					<a target="_blank" href="https://www.facebook.com/seriedelas/">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/social-icons-1/facebook.svg">
 					</a>
 				</div>

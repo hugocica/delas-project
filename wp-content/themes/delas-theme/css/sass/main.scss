@@ -100,6 +100,34 @@ h2 {
 #wrapper {
     overflow-x: hidden;
 
+    #highlight {
+        background-color: $green_delas;
+        padding: 30px 0;
+        margin-bottom: 30px;
+
+        blockquote {
+            border-left: none;
+            margin-bottom: 0;
+
+            p {
+                color: #fff;
+
+                &.quote {
+                    text-align: center;
+
+                    span {
+                        font-size: 42px;
+                        line-height: 20px;
+                        color: currentColor;
+                    }
+                }
+                &.author {
+                    text-align: right;
+                    font-style: italic;
+                }
+            }
+        }
+    }
     .episodes-container {
         padding: 30px 0;
         .episodes-item {
@@ -202,9 +230,9 @@ h2 {
             }
             .uni-content {
                 img {
-                    width: 150px;
+                    width: 100px;
                     display: block;
-                    margin: 10px auto 25px;
+                    margin: 35px 50px 15px;
                     float: right;
                     clear: both;
                 }

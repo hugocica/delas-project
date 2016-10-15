@@ -42,10 +42,13 @@
 	</section>
 </div>
 
-<section id="hightlight">
-	<blockquote>
-		<p>Chapado mas sempre ligado</p>
-	</blockquote>
+<section id="highlight">
+	<div class="container">
+		<blockquote>
+			<p class="quote"><span class="quotes">&#8220;</span> Chapado mas sempre ligado <span class="quotes">&#8221;</span></p>
+			<p class="author">Hugo Cicarelli</p>
+		</blockquote>
+	</div>
 </section>
 
 <div class="container">
