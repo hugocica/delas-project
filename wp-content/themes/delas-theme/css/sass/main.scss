@@ -200,6 +200,15 @@ h2 {
                     text-align: left;
                 }
             }
+            .uni-content {
+                img {
+                    width: 150px;
+                    display: block;
+                    margin: 10px auto 25px;
+                    float: right;
+                    clear: both;
+                }
+            }
         }
         .dev-footer {
             background-color: $green_delas;
