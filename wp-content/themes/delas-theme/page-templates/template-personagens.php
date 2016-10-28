@@ -23,9 +23,10 @@
             foreach ( $personagens['locodivos'] as $personagem ) {
                 $extension = explode(".", strtolower($personagem['nome']));
                 $right_class = ( $aux%2 != 0 ) ? 'pull-right' : '' ;
+                $right_css = ( $aux%2 != 0 ) ? 'right' : '' ;
                 $aux++;
                 ?>
-                <div class="personagem-item col-md-12">
+                <div class="personagem-item col-md-12 <?php echo $right_css; ?>">
                     <div class="entry-thumb <?php echo $right_class; ?> col-md-6" style="background-image: url(<?php echo $personagem['photo']; ?>)">
                     </div>
                     <div class="entry-content col-md-6">

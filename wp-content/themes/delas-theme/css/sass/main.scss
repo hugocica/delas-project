@@ -183,6 +183,18 @@ h2 {
             margin: 20px 0;
             height: 350px;
 
+            &.right {
+                img {
+                    float: right;
+                }
+                h3 {
+                    float: right;
+                }
+                p {
+                    clear: both;
+                    text-align: right;
+                }
+            }
             .entry-thumb {
                 height: 100%;
                 background-size: cover;
@@ -204,8 +216,7 @@ h2 {
                     padding: 15px 20px;
                 }
             }
-        }
-    }
+        }    }
 
     #footer {
         margin-top: 30px;
