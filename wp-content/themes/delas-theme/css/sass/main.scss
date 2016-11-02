@@ -4,10 +4,18 @@ $pink_delas: #f04b32;
 $green_delas: #69c5aa;
 $main-font: 'Pacific Northwest';
 $secondary-font: 'Montserrat';
+$special-font: 'Learning Curve Pro';
 
 @font-face {
     font-family: 'Pacific Northwest';
     src: url('fonts/Pacific Northwest.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Learning Curve Pro';
+    src: url('fonts/LearningCurve_OT.otf');
     font-weight: normal;
     font-style: normal;
 }
@@ -107,14 +115,31 @@ h2 {
 
         blockquote {
             border-left: none;
-            margin-bottom: 0;
+            max-width: 580px;
+            margin: 0 auto;
+            text-transform: uppercase;
+            font-style: italic;
+            position: relative;
+            height: 200px;
 
             p {
                 color: #fff;
+                font-family: $main-font;
+                font-size: 42px;
 
                 &.quote {
                     text-align: center;
-
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all ease 3s;
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    
+                    &.active {
+                        visibility: visible;
+                        opacity: 1;
+                    }
                     span {
                         font-size: 42px;
                         line-height: 20px;
@@ -236,7 +261,7 @@ h2 {
                 p {
                     font-size: 12px;
                     color: #fff;
-                    text-align: left;
+                    text-align: justify;
                 }
             }
             .uni-content {

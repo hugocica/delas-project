@@ -3,7 +3,7 @@
 	<head>
 		<title><?php echo bloginfo( 'name' ); ?></title>
 		<meta charset="utf-8">
-		<meta name="theme-color" content="#f37884">
+		<meta name="theme-color" content="#f04b32">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- facebook og tags -->
