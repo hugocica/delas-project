@@ -23,4 +23,36 @@
             ?>
         </select>
     </p>
+
+    <?php while($mb->have_fields_and_multi('quotes')): ?>
+    <?php $mb->the_group_open(); ?>
+
+        <div class="col-md-6">
+            <?php $mb->the_field('quote'); ?>
+            <label for="<?php $mb->the_name(); ?>">Frase</label>
+            <input type="text" id="<?php $mb->the_name(); ?>" name="<?php $mb->the_name(); ?>"  style="display: inline-block;vertical-align: middle;" value="<?php $mb->the_value(); ?>">
+        </div>
+
+        <a href="#" class="dodelete button">Apagar membro</a>
+        </p>
+
+    <?php $mb->the_group_close(); ?>
+    <?php endwhile; ?>
+
+    <p style="margin-bottom:15px; padding-top:5px;">
+        <a href="#" class="docopy-quotes button">Adicionar frase</a>
+        <a style="float:right; margin:0 10px;" href="#" class="dodelete-quotes button">Remover Todas</a>
+    </p>
 </div>
+
+<style>
+    .col-md-6 {
+        float: left;
+        width: 50%;
+    }
+    .col-md-12 {
+        float: left;
+        clear: both;
+        width: 100%;
+    }
+</style>
