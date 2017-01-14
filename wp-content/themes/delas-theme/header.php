@@ -1,3 +1,31 @@
+<?php
+	if ( session_id() == '' ) {
+		session_start();
+	}
+
+	// $_SESSION['auth_code'] = 'new';
+	if ( !isset($_GET['code']) ) {
+		if ( is_front_page() || is_page('episodios') ) {
+			$client_id = "b371224661e14e0b8e80c53e0ad19525";
+			$_SESSION['auth_code_new'] = true;
+
+			global $wp;
+			$current_url = home_url(add_query_arg(array(),$wp->request));
+
+			$auth_request_url = 'https://api.instagram.com/oauth/authorize/?client_id='.$client_id.'&redirect_uri='. $current_url .'&response_type=code&scope=public_content';
+
+			header( 'Location:' . $auth_request_url );
+			exit();
+		}
+	} 
+	// else {
+	// 	echo 'eita';
+	// 	$_SESSION['auth_code'] = $_GET['code'];
+	// 	header( 'Location:' . site_url() );
+	// 	exit();
+	// }
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
