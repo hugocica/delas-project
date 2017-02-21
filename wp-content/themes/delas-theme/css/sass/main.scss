@@ -7,6 +7,34 @@ $main-font: 'Pacific Northwest';
 $secondary-font: 'Montserrat';
 $special-font: 'Learning Curve Pro';
 
+$phone-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$laptop-width: 1366px;
+
+@mixin phone {
+    @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet-portrait {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) and (orientation : portrait) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) and (orientation : landscape) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
 @font-face {
     font-family: 'Pacific Northwest';
     src: url('fonts/Pacific Northwest.ttf');
@@ -55,6 +83,17 @@ h2 {
     vertical-align: middle;
 }
 .main-header {
+    .logo-header {
+        a {
+            svg {
+                width: 230px;
+
+                @include phone {
+                    width: 100px;
+                }
+            }
+        }
+    }
     .social-header {
         height: 185px;
         text-align: right;
@@ -65,6 +104,19 @@ h2 {
         }
         img {
             width: 52px;
+        }
+        @include phone {
+            display: none;
+        }
+    }
+    .navbar-toggle {
+        background-color: $green_delas;
+        position: absolute;
+        top: 30px;
+        right: 15px;
+
+        .icon-bar {
+            background-color: #fff;
         }
     }
     .main-navigation-bar {
@@ -103,6 +155,12 @@ h2 {
                 }
             }
         }
+        @include phone {
+            display: none;
+        }
+    }
+    @include phone {
+        padding: 15px 0;
     }
 }
 
@@ -127,7 +185,10 @@ h2 {
                 color: #fff;
                 font-family: $main-font;
                 font-size: 42px;
-
+                
+                @include phone {
+                    font-size: 26px;
+                }
                 &.quote {
                     text-align: center;
                     visibility: hidden;
@@ -138,6 +199,9 @@ h2 {
                     top: 20%;
                     left: 0;
                     
+                    @include phone {
+                        top: 25%;
+                    }
                     &.active {
                         visibility: visible;
                         opacity: 1;
@@ -358,5 +422,8 @@ h2 {
                 }
             }
         }
+    }
+    @include phone {
+        width: 100%;
     }
 }

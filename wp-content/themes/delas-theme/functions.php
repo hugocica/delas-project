@@ -65,6 +65,7 @@ function get_insta_posts() {
     $insta_user = '3313496882'; // aseridelas
 
     // $url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=" . $token;
+    // $url = 'https://api.instagram.com/v1/users/search?q=aseridelas&client_id=' . $client_id;
     $url = 'https://api.instagram.com/v1/users/'. $insta_user .'/media/recent/?access_token=' . $token;
 
     $process = curl_init();
