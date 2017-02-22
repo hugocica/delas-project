@@ -7,6 +7,34 @@ $main-font: 'Pacific Northwest';
 $secondary-font: 'Montserrat';
 $special-font: 'Learning Curve Pro';
 
+$phone-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$laptop-width: 1366px;
+
+@mixin phone {
+    @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet-portrait {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) and (orientation : portrait) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) and (orientation : landscape) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
 @font-face {
     font-family: 'Pacific Northwest';
     src: url('fonts/Pacific Northwest.ttf');
@@ -54,7 +82,20 @@ h2 {
     height: 100%;
     vertical-align: middle;
 }
+
 .main-header {
+
+    .logo-header {
+        a {
+            svg {
+                width: 230px;
+
+                @include phone {
+                    width: 100px;
+                }
+            }
+        }
+    }
     .social-header {
         height: 185px;
         text-align: right;
@@ -65,6 +106,39 @@ h2 {
         }
         img {
             width: 52px;
+        }
+        @include phone {
+            display: none;
+        }
+    }
+    .navbar-toggle {
+        background-color: $green_delas;
+        position: absolute;
+        top: 30px;
+        right: 15px;
+        z-index: 30;
+
+        .icon-bar {
+            background-color: #fff;
+            transition: all ease 0.5s;
+        }
+        &.opened {
+            .icon-bar {
+                position: relative;
+
+                &:nth-child(2) {
+                    transform: rotate(45deg);
+                    top: 6px;
+                }
+                &:nth-child(3) {
+                    visibility: hidden;
+                    opacity: 0;
+                }
+                &:last-of-type {
+                    transform: rotate(-45deg);
+                    top: -6px;
+                }
+            }
         }
     }
     .main-navigation-bar {
@@ -97,12 +171,49 @@ h2 {
                     text-decoration: none;
                     border-left: 1px solid #fff;
                     padding: 0 20px;
+
+                    @include phone {
+                        border-left: none;
+                        padding: 0;
+                    }
                 }
                 .sub-menu {
                     display: none;
                 }
             }
+            @include phone {
+                margin-top: 85px;
+                width: 70%;
+            }
         }
+        @include phone {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            transform: translateX(100%);
+            transition: all ease 0.5s;
+            margin-top: 0;
+            z-index: 15;
+            // visibility: hidden;
+            // opacity: 0;
+            // display: none;
+
+            &.opened {
+                transform: translateX(20%);                
+                // visibility: visible;
+                // opacity: 1;
+                // display: block;
+            }
+            ul {
+                .menu-item {
+                    display: block;
+                }
+            }
+        }
+    }
+    @include phone {
+        padding: 15px 0;
     }
 }
 
@@ -116,7 +227,7 @@ h2 {
 
         blockquote {
             border-left: none;
-            max-width: 720px;
+            max-width: 800px;
             margin: 0 auto;
             text-transform: uppercase;
             font-style: italic;
@@ -127,7 +238,10 @@ h2 {
                 color: #fff;
                 font-family: $main-font;
                 font-size: 42px;
-
+                
+                @include phone {
+                    font-size: 26px;
+                }
                 &.quote {
                     text-align: center;
                     visibility: hidden;
@@ -138,6 +252,9 @@ h2 {
                     top: 20%;
                     left: 0;
                     
+                    @include phone {
+                        top: 25%;
+                    }
                     &.active {
                         visibility: visible;
                         opacity: 1;
@@ -358,5 +475,8 @@ h2 {
                 }
             }
         }
+    }
+    @include phone {
+        width: 100%;
     }
 }

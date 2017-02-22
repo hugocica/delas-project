@@ -1,3 +1,30 @@
+<?php
+	if ( session_id() == '' ) {
+		session_start();
+	}
+
+	// $_SESSION['auth_code'] = 'new';
+	if ( !isset($_GET['code']) ) {
+		if ( is_front_page() || is_page('episodios') ) {
+			$client_id = "b371224661e14e0b8e80c53e0ad19525";
+
+			global $wp;
+			$current_url = home_url(add_query_arg(array(),$wp->request));
+
+			$auth_request_url = 'https://api.instagram.com/oauth/authorize/?client_id='.$client_id.'&redirect_uri='. $current_url .'&response_type=code&scope=public_content';
+
+			header( 'Location:' . $auth_request_url );
+			exit();
+		}
+	} 
+	// else {
+	// 	echo 'eita';
+	// 	$_SESSION['auth_code'] = $_GET['code'];
+	// 	header( 'Location:' . site_url() );
+	// 	exit();
+	// }
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -40,7 +67,7 @@
 				<div class="logo-header col-md-8">
 					<a href="<?php echo site_url(); ?>">
 						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-							 width="230.98px" height="175.189px" viewBox="0 0 230.98 175.189" enable-background="new 0 0 230.98 175.189"
+							 width="100%" viewBox="0 0 230.98 175.189" enable-background="new 0 0 230.98 175.189"
 							 xml:space="preserve">
 						<g>
 							<defs>
@@ -595,6 +622,18 @@
 					</a>
 				</div>
 			</div>
+
+			<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+
+				<span class="sr-only"><?php _e('Toggle navigation','zerif-lite'); ?></span>
+
+				<span class="icon-bar"></span>
+
+				<span class="icon-bar"></span>
+
+				<span class="icon-bar"></span>
+
+			</button>
 
 			<nav class="main-navigation-bar">
 				<?php
