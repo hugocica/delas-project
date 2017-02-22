@@ -120,6 +120,25 @@ h2 {
 
         .icon-bar {
             background-color: #fff;
+            transition: all ease 0.5s;
+        }
+        &.opened {
+            .icon-bar {
+                position: relative;
+
+                &:nth-child(2) {
+                    transform: rotate(45deg);
+                    top: 6px;
+                }
+                &:nth-child(3) {
+                    visibility: hidden;
+                    opacity: 0;
+                }
+                &:last-of-type {
+                    transform: rotate(-45deg);
+                    top: -6px;
+                }
+            }
         }
     }
     .main-navigation-bar {
@@ -152,10 +171,19 @@ h2 {
                     text-decoration: none;
                     border-left: 1px solid #fff;
                     padding: 0 20px;
+
+                    @include phone {
+                        border-left: none;
+                        padding: 0;
+                    }
                 }
                 .sub-menu {
                     display: none;
                 }
+            }
+            @include phone {
+                margin-top: 85px;
+                width: 70%;
             }
         }
         @include phone {
