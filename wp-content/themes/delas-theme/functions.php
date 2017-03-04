@@ -55,8 +55,10 @@ function get_token( $client_id, $client_secret ) {
 }
 
 function get_insta_posts() {
-    $client_id = "b371224661e14e0b8e80c53e0ad19525";
-    $client_secret = "30895aaf472d444194a27ff2a164b84b";
+    // $client_id = "b371224661e14e0b8e80c53e0ad19525";
+    // $client_secret = "30895aaf472d444194a27ff2a164b84b";
+    $client_id = "31a7bc9b075a41c39061a8b45ca0ec27";
+    $client_secret = "6a7bbfc46e774db99f3d8bd550083a5d";
     // $token = '31520384.b371224.9d8ee2fd2cfa4b62a5a054729dd0084f';
     $token = get_token( $client_id, $client_secret );
 
@@ -64,9 +66,9 @@ function get_insta_posts() {
     // $insta_user = "31520384"; //hugo_cica
     $insta_user = '3313496882'; // aseridelas
 
-    // $url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=" . $token;
+    $url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=" . $token;
     // $url = 'https://api.instagram.com/v1/users/search?q=aseridelas&client_id=' . $client_id;
-    $url = 'https://api.instagram.com/v1/users/'. $insta_user .'/media/recent/?access_token=' . $token;
+    // $url = 'https://api.instagram.com/v1/users/'. $insta_user .'/media/recent/?access_token=' . $token;
 
     $process = curl_init();
     curl_setopt($process, CURLOPT_URL, $url);

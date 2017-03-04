@@ -63,6 +63,10 @@ $laptop-width: 1366px;
 h1, h2, h3, h4, h5, h6 {
     font-family: $main-font;
     color: #414141;
+
+    &.sbi_no_bio {
+        font-family: $secondary-font;
+    }
 }
 p, span {
     font-family: 'Montserrat';

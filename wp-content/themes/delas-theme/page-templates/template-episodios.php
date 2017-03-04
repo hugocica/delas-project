@@ -15,6 +15,8 @@
 <div class="container">
     <div class="episodes-container col-md-12">
     <?php
+        echo do_shortcode('[instagram-feed num=12 showlikes=true buttontext="Carregar mais" cols=3 followtext="Nos siga no Instagram"]');
+        /*
         foreach ( $episodios->data as $data ) {
             // echo '<pre>';
             // var_dump($data);
@@ -47,6 +49,7 @@
                 </div>
             <?php
         }
+        */
     ?>
     </div> 
 </div>

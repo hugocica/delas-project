@@ -13,8 +13,10 @@
 		<div class="episodes-container col-md-12">
 
 			<?php
-				$episodios = get_insta_posts();
+				// $episodios = get_insta_posts();
 
+				echo do_shortcode('[instagram-feed num=3 showbutton=false cols=3 followtext="Nos siga no Instagram"]');
+				/*
 		        for ( $aux = 0; $aux < 3; $aux++ ) {
 		        	$data = $episodios->data[$aux];
 		            // echo '<pre>';
@@ -48,6 +50,7 @@
 		                </div>
 		            <?php
 		        }
+		        */
 		    ?>
 		</div>
 	</section>
